@@ -1,0 +1,8 @@
+<h1>Index</h1>
+
+<ul>
+<% for page in @pages.sort %>
+	<li><%= link_to(CGI.unescape(File.basename(page)), :action => 'view', :id => File.basename(page)) %></li>
+<% end %>
+</ul>
+
